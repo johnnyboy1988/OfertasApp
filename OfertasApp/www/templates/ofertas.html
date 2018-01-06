@@ -1,0 +1,16 @@
+<ion-view view-title="Ofertas">
+    <ion-content>
+       <ion-list>
+           <ion-item ng-repeat="oferta in ofertas">
+               <div class="item-avatar">
+                   <img data-ng-src="{{oferta.imagem}}" />
+                   <h2>{{oferta.title}} - {{oferta.valor_f}}</h2>
+                   <p>{{oferta.descricao}}</p>
+                   <p>Até: {{oferta.validade | date:"dd/MM/yyyy"}}</p>
+               </div>
+               <ion-option-button class="button-energized">Favoritos</ion-option-button>
+           </ion-item>
+       </ion-list>
+
+    </ion-content>
+</ion-view>
